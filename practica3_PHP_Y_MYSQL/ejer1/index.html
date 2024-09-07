@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+  <style>
+    body {
+      background-color: skyblue; /* Color de fondo azul claro */
+      display: flex; /* Usar flexbox para centrar el contenido */
+      justify-content: center; /* Centrar horizontalmente */
+      align-items: center; /* Centrar verticalmente */
+      height: 100vh; /* Altura del cuerpo ocupa toda la pantalla */
+    }
+    .container {
+      background-color: white; /* Color de fondo blanco para el contenedor */
+      padding: 30px; /* Espacio interno alrededor del contenido */
+    }
+    h1 {
+      text-align: center; /* Centrar el texto del encabezado */
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%; /* Campos de entrada ocupan todo el ancho del contenedor */
+      padding: 10px; /* Espacio interno dentro del campo */
+      margin: 10px 0; /* Espacio externo arriba y abajo del campo */
+      border: 1px solid white; /* Borde gris claro alrededor del campo */
+      box-sizing: border-box; /* Incluir padding y borde dentro del ancho total */
+    }
+    button {
+      background-color: skyblue; /* Color de fondo azul claro del botón */
+      color: white; /* Color del texto del botón: blanco */
+      padding: 12px 20px; /* Espacio interno del botón (arriba/abajo 12px, izquierda/derecha 20px) */
+      border: none; /* Sin borde alrededor del botón */
+      cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+      width: 100%; /* El botón ocupa todo el ancho del contenedor */
+    }
+    button:hover {
+      background-color: skyblue; /* Cambia el color de fondo del botón a un azul más oscuro al pasar el cursor */
+    }
+    .forgot {
+      text-align: center; /* Centrar el texto dentro de la clase forgot */
+    }
+</style>
+</head>
+<body>
+  <div class="container"> <!-- Contenedor principal del formulario -->
+    <h1>Login</h1> <!-- Encabezado del formulario -->
+    
+    <!-- Envío del formulario a login.php -->
+    <form action="login.php" method="POST">
+      <input type="text" name="username" placeholder="Usuario" required> <!-- Campo de entrada para el nombre de usuario -->
+      <input type="password" name="password" placeholder="Password" required> <!-- Campo de entrada para la contraseña -->
+      <button type="submit">Iniciar sesión</button> <!-- Botón para enviar el formulario -->
+    </form>
+
+    <div class="forgot">
+      <a href="#">Olvidaste tu password?</a> <!-- Enlace para recuperar la contraseña (sin URL real) -->
+    </div>
+  </div>
+</body>
+</html>
